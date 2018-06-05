@@ -170,6 +170,44 @@ docker service：服务管理，子命令有 create, inspect, ps, ls ,rm , scale
 docker stack/deploy：试验特性，用于多应用部署，等正式版加进来再说。
 
 
+swarmkit的引入，在docker中引入了三个子命令：
+
+docker swarm——swarm集群搭建
+docker service——服务管理
+docker node——集群节点管理
+
+docker swarm 子命令
+查看子命令 vagrant@test1:~$ docker swarm –help
+
+  init        初始化swarm集群
+  join        将当前节点加入到集群中
+  join-token  管理加入token
+  update      动态更新swarm配置
+  leave       当前节点主动退出集群(仅限worker节点)
+
+docker service 子命令
+查看子命令 vagrant@test1:~$ docker service –help
+
+create      创建服务
+inspect     显示服务详情
+ps          列出服务中的容器
+ls          列出所有服务及简介
+rm          删除服务
+scale       调整服务的副本数
+update      动态更新服务配置
+
+docker node 子命令
+查看子命令 vagrant@test1:~$ docker node –help
+
+demote      管理节点为指定子节点降权
+inspect     显示节点详情
+ls          列出集群中的节点
+promote     管理节点为指定子节点提权
+rm          删除一个节点
+ps          列出指定子节点中running的容器
+update      动态更新节点配置
+
+
 
 
 
