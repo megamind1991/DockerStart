@@ -140,6 +140,25 @@ docker run it --name cct3 --link=containName：webtest imgname
 --link
 主要是link命令 的别名很重要
 
+===================================================================================================================
+
+docker 数据卷
+
+docker run -it -v ~/datavolume:/data ubuntu /bin/bash               添加数据卷
+
+docker run -it -v ~/datavolume:/data:ro --name dvt1 ubuntu /bin/bash     添加访问权限
+
+dockerFile 中创建数据卷 效果完全不一样
+
+docker run --volumes-from containName 创建一个docker数据卷容器  这已经不是 像上面的数据卷了  实现docker容器间的数据 共享
+
+备份 与 还原
+
+======================================================================================================================
+
+跨主机 容器链接  网桥方式
+
+
 
 
 
