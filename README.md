@@ -90,6 +90,62 @@ docker pull -a imgName：tag   拉去镜像
 
 docker push imgName：tag     推送镜像
 
+自己的镜像的 创建
+
+docker commit 通过容器创建镜像 docker build 通过dockerFile构建
+
+docker commit --auther --message -p containerName imgName
+
+docker build -t-"文件路径"
+
+==========================================================================================================
+
+Docker C/S 模式
+
+RemoteAPI
+
+-u sockt访问
+
+service docker stop
+
+service docker start
+
+service docker restart
+
+Docker守护线程的 启动选项
+
+docker的启动配置文件 etc/default/docker
+
+-H 进行远程链接 一台dockerClient 一台dockerService
+
+===============================================================================================================
+
+Docker 容器的网络基础
+
+容器会有一个虚拟网卡 与docker 进行桥接 docker0 虚拟网桥
+
+docker容器 互联
+
+-icc 允许互相链接
+
+docker run it --name cct3 --link=containName：webtest imgname
+
+拒绝容器访问
+
+--icc =false
+
+循序特地链接 
+
+--icc = false  --iptables=true 
+--link
+主要是link命令 的别名很重要
+
+
+
+
+
+
+
 
 
 
