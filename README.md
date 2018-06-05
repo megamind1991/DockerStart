@@ -160,6 +160,16 @@ docker run --volumes-from containName 创建一个docker数据卷容器  这已�
 
 
 
+============================================================================
+
+与swarm一起使用 搭建集群
+
+docker swarm：集群管理，子命令有 init, join,join-token, leave, update
+docker node：节点管理，子命令有 demote, inspect,ls, promote, rm, ps, update
+docker service：服务管理，子命令有 create, inspect, ps, ls ,rm , scale, update
+docker stack/deploy：试验特性，用于多应用部署，等正式版加进来再说。
+
+
 
 
 
